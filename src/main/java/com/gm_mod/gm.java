@@ -1,6 +1,8 @@
 package com.gm_mod;
 
+import com.gm_mod.init.ModItems;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -14,11 +16,15 @@ public class gm
 
     private static final Logger LOGGER = LogManager.getLogger();
 
+    public static final String MOD_ID = "gm_mod";
+
     public gm() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        eventBus.addListener(this::setup);
+        eventBus.addListener(this::doClientStuff);
 
+        ModItems.ITEMS.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
