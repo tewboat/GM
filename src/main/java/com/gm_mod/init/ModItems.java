@@ -6,6 +6,7 @@ import com.gm_mod.items.ModItemGroups;
 import com.gm_mod.items.ModItemTier;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,5 +29,9 @@ public class ModItems {
     }
 
     public static final RegistryObject<Item> ABOBA_PICK = ITEMS.register("aboba_pick",
-            () -> new SwordItem(ModItemTier.ABOBA, 2, 3f, new Item.Properties().tab(ModItemGroups.ABOBA_ONLY).stacksTo(1).food(Foods.HONEY_BOTTLE)));
+            () -> new SwordItem(ModItemTier.ABOBA, 2, 3f,
+                    new Item.Properties().tab(ModItemGroups.ABOBA_ONLY).stacksTo(1).food(Foods.HONEY_BOTTLE)));
+    public static final RegistryObject<Item> ABOBA_SWORD = ITEMS.register("aboba_sword",
+            () -> new PickaxeItem(ModItemTier.ABOBA, 2, 3f,
+                    new Item.Properties().tab(ModItemGroups.ABOBA_ONLY).stacksTo(1).food(Foods.HONEY_BOTTLE)));
 }
