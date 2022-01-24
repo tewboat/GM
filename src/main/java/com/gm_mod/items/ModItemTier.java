@@ -1,6 +1,5 @@
 package com.gm_mod.items;
 
-import com.gm_mod.init.ModItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;

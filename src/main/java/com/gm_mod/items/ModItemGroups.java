@@ -1,6 +1,5 @@
 package com.gm_mod.items;
 
-import com.gm_mod.init.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

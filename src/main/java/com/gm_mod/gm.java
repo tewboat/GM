@@ -1,6 +1,7 @@
 package com.gm_mod;
 
-import com.gm_mod.init.ModItems;
+import com.gm_mod.blocks.ModBlocks;
+import com.gm_mod.items.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -25,7 +26,9 @@ public class gm
         eventBus.addListener(this::doClientStuff);
 
         ModItems.ITEMS.register(eventBus);
+        ModBlocks.register(eventBus);
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
