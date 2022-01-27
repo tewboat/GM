@@ -1,10 +1,7 @@
 {
   "variants": {
-    "1": {
+    "": {
       "model": "gm_mod:block/aboba_block"
-    },
-    "2": {
-      "model": "gm_mod:block/aboba_block2"
     }
   }
 }

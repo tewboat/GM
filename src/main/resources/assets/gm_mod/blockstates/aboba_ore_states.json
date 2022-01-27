@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "gm_mod:block/aboba_ore"
+      "model": "gm_mod:block/aboba_ore_1"
     }
   }
 }

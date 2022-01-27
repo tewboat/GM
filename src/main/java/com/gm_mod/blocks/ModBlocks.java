@@ -7,9 +7,6 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.IntegerProperty;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,7 +21,7 @@ public class ModBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, gm.MOD_ID);
 
     public static final RegistryObject<Block> ABOBA_ORE = registerBlock("aboba_ore",
-            () -> new AbobaOre(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops()
+            () -> new Block(AbstractBlock.Properties.of(Material.STONE).requiresCorrectToolForDrops()
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE).strength(8f)));
 
     public static final RegistryObject<Block> ABOBA_BLOCK = registerBlock("aboba_block",
